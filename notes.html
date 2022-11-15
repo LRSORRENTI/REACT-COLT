@@ -346,16 +346,16 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
          < div> 
       </p>
       <p>
-        < h1 > hello there </ h1 >
+        < h1 > hello there < / h1 >
       </p>
       <p>
-        < h1 > hello there </ h1 >
+        < h1 > hello there < / h1 >
       </p>
       <p>
-       < p > I am jsx</ p> 
+       < p > I am jsx  < / p> 
        </p>
        <p>
-        < p > I am jsx</ p> 
+        < p > I am jsx< / p> 
         </p>
         <p>
           < /div >
@@ -381,6 +381,57 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         BABEL, and our 'type="text/jsx"' then inside of our JavaScript
         file we can write html! And using the ReactDom.render() to 
         add html to our page FROM a JavaScript file
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Function component
+      </h2>
+      <p>
+        We just wrote our first class component, but 
+        we can also write function components
+      </p>
+      <p>
+        A Class component is the traditional React 
+        component, we write our logic inside of a JS class, 
+        and we MUST include the render() method
+      </p>
+      <p>
+        Function components are usually used for simpler, more 
+        basic components
+      </p>
+      <p>
+        They don't have the same capabilities as class components,
+        and there's no render method needed, just the function 
+        return statement
+      </p>
+      <p>
+        function Dog()
+      </p>
+      <p>
+        {
+      </p>
+      <p>
+        return '< p > German Shepherd, Cava-Corgi < / p >''
+      </p>
+      <p>
+      }
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        So what's the main difference?
+      </p>
+      <p>
+        Both can accept props and render content to the page
+      </p>
+      <p>
+        Historically function components couldn't utitlize 'state' 
+        and 'lifecycle methods'
+      </p>
+      <p>
+        With the introduction of Hooks, we can write full-featured 
+        function components, which will dive into later!
       </p>
     </div>
     <script
