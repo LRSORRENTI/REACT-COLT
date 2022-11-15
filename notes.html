@@ -230,6 +230,158 @@
       <h3>
         Writing our first component
       </h3>
+      <p>
+        It's time to write our first React component, but there'll be 
+        hundreds we'll write throughout the course, but this one will be the 
+        simplest
+      </p>
+      <p>
+        There are two ways to write components in React, one way is using classes, 
+        and the other is using functions
+      </p>
+      <p>
+        But for this first component we're going to use class
+      </p>
+      <p>
+        Also keep in mind, we're not going to be creating our React 
+        apps this way for long, soon we'll be exclusively utilizing 
+        the 'create-react-app' tool
+      </p>
+      <p>
+         First up, in our html we must include react, we 
+         do this by including the following inside of 
+         script tags INSIDE the body, but at the bottom, and remember 
+         the order that we put them DOES MATTER
+      </p>
+<p>
+        First script tag:
+      </p>
+      <p>
+        src="https://unpkg.com/react/umd/react.development.js"
+      </p>
+      <p>
+        Second script tag:
+      </p>
+      <p>
+        src="https://unpkg.com/react-dom/umd/react-dom.development.sj"
+      </p>
+      <p>
+        Third script tag:
+      </p>
+      <p>
+        src="https://unpkg.com/babel-standalone"
+      </p>
+      <p>
+        Fourth script tag: 
+      </p>
+      <p>
+        src="index.js" type="text/jsx"
+      </p>
+      <p>
+        We're using cdn to link here, but we could download these, 
+        and link to them locally, but we're not going to stress it 
+        since shortly we'll be only using the create-react-app tool
+      </p>
+      <p>
+        HEADS UP!!! The links above for react are deprecated, I think 
+        the babel unpkg links work, but I needed to go to the official 
+        React website and add new CDN links for it to work
+</p>
+<p>
+ crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+ </p>
+ <p>
+crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</p>
+      <p>
+        The third script tag is for babel, babel allows us to 
+        write html inside our JavaScript, jsx is not valid normally, 
+        so babel transpiles it to valid JavaScript, babel comes 
+        in clutch here for us
+      </p>
+      <p>
+        Finally we just need to link to our index.js file or whichever 
+        file we're creating our component, notice though we need to 
+        append after src="index.js" type="text/jsx", this 
+        is required, without this it will not work
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Fully set up
+      </h2>
+      <p>
+        Now we've got our index.html done, after those script tags 
+        are added in that specific order in the body, and we have our 
+        'root' div above them we're good to go
+      </p>
+      <p>
+        Every single class component we create will be:
+      </p>
+      <p>
+        class Something extends React.Component{
+      </p>
+      <p>
+        render() {
+      </p>
+      <p>
+        return < h1 >Hello, {this.props.name} < /h1> 
+      </p>
+      <p>}</p>
+      <p>}</p>
+    </div>
+    <div class="container">
+      <p>
+      Also note with the render method, we can only return 
+      one type of html tag per render, if we wanted to render 
+      multiple h1 tags or paragraph tags we'd need to:
+      </p>
+      <p>
+        render() {
+      </p>
+      <p>
+        return (
+      </p>
+      <p>
+         < div> 
+      </p>
+      <p>
+        < h1 > hello there </ h1 >
+      </p>
+      <p>
+        < h1 > hello there </ h1 >
+      </p>
+      <p>
+       < p > I am jsx</ p> 
+       </p>
+       <p>
+        < p > I am jsx</ p> 
+        </p>
+        <p>
+          < /div >
+        </p>
+        <p>
+          );
+        </p>
+        <p>
+        }
+        </p>
+        <p>
+        }
+        </p>
+    </div>
+    <div class="container">
+      <p>
+      The above would work now, we can render multiple of 
+      the same tag, but we must wrap them in a div!
+      </p>
+      <p>
+        That's a very simple component, but all components will 
+        follow a similar structure, we include our CDN links, ESPECIALLY 
+        BABEL, and our 'type="text/jsx"' then inside of our JavaScript
+        file we can write html! And using the ReactDom.render() to 
+        add html to our page FROM a JavaScript file
+      </p>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
