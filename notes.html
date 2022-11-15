@@ -170,8 +170,38 @@
         <p>
         Components usually combine peices of UI and JavaScript logic, for 
         example the first component we'll look at is the rating component, 
-        where you can click a number of stars out of four or five and 
+        where you can click a number of stars out of four or five and the 
+        page will update based on the selection
         </p>
+        <p>
+            Components usually have classes that will render themselves 
+            into HTML on the page
+        </p>
+    </div>
+    <div class="container mt-4">
+      <h2>
+        Looking at a large app
+      </h2>
+      <p>
+        If we're working on a large project, our file structure will have many 
+        different JavaScript files, 10-30 or however many, but each of our components 
+        is localized inside it's own unique file, so our SRC folder will have 
+        a LOT of files inside
+      </p>
+      <p>
+        For example, we can have a navbar component, that we use in different places 
+        in our react app, but the navbar can be a little different depending on 
+        where it is, so we have our navbar js file component, and we can reuse it, 
+        tweak it, and change it depending on where and how we want to
+      </p>
+      <p>
+        The main takeaway is that in a react app, we can have components that 
+        structure our webpage, we can have a default slate, like a navbar 
+        component, and we can take that navbar component and customize it depending 
+        on where the user is in our application, so we could have one central navbar 
+        uncustomized, then take that navbar component and use it in 3 or however many unique 
+        locations, changing how the navbar looks and functions each time
+      </p>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
