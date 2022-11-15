@@ -16,9 +16,10 @@
     <style>
       body {
         background-color: lightcyan;
+        font-size: 100%;
       }
       p {
-        font-size: 30px;
+        font-size: 2rem;
         display: flex;
         justify-content: center;
         margin-top: 40px;
@@ -26,7 +27,16 @@
       h2 {
         display: flex;
         justify-content: center;
-        font-size: 45px;
+        font-size: 5rem;
+        margin-top: 60px;
+        font-weight: bold;
+      }
+      h3{
+        display: flex;
+        justify-content: center;
+        font-size: 4rem;
+        margin-top: 50px;
+        font-weight: bold;
       }
       ul {
         margin-top: 40px;
@@ -54,7 +64,7 @@
         React is a popular front-end framework / library that's developed and
         sponsored by Facebook
       </p>
-      <p class="display-4">The main point of React is to:</p>
+      <p class="display-4 mb-4">The main point of React is to:</p>
       <table id="t1" class="table d-flex display-5 justify-content-center">
         <thead></thead>
         <tbody>
@@ -91,7 +101,337 @@
       <p>
         They are often 'opinionated' meaning you have to follow the rules of the
         framework, which can often be restricting depending on what your goals
-        are
+        are. This is often referred to as 'inversion of control', with a
+        library, you're in control of the structure, with a framework, the
+        framework has control
+      </p>
+      <p>
+        Frameworks often provide code for reuse inside the framework, as well 
+        as providing templating of HTML
+      </p>
+      <p>
+        The main frameworks are:
+        <ul>
+            <li>
+                Angular
+            </li>
+            <li>
+                Vue
+            </li>
+            <li>
+                Ember
+            </li>
+            <li>
+                React??
+            </li>
+        </ul>
+      </p>
+      <p>
+        There are dozens of frameworks out there, those 4 are 
+        the most popular
+      </p>
+      <p>
+        React does less 'out of the box' than a tradtional framework, but 
+        when most developers utilize React, they're also using React 
+        specific tools alongside
+      </p>
+      <p>
+        Things like: React Router, Redux, Remix, there's a lot 
+        of of React tools available for use, and there's almost a 
+        'standardized stack' for developing React
+      </p>
+    </div>
+    <div class="container">
+          <h2 class="justify-content-center">
+            Library or Framework?
+          </h2>
+          <p>
+           So at face value React is a library, on it's own.
+          </p>
+          <p>
+            However, few people use React just by itself, it's almost 
+            always combined with things like React Router, Webpack etc..
+          </p>
+          <p>
+            So when React is used in conjunction with tools like React Router,
+            Redux, Webpack, React becomes an 'Ecosystem Framework'
+          </p>
+          <p>
+            But there's also Next.js which is an actual framework built around 
+            React
+          </p>
+    </div>
+    <div class="container mt-4">
+        <h2>
+            Components
+        </h2>
+        <p>
+            Let's talk about components, components are the main building 
+            block of React, React is about creating these components and 
+            structuring how these components communicate with each other, 
+            pass data bewteen one another
+        </p>
+        <p>
+            Components let you split the User Interface into independent, 
+            reuasble peices, and think about each peice in isolation
+        </p>
+        <p>
+        Components usually combine peices of UI and JavaScript logic, for 
+        example the first component we'll look at is the rating component, 
+        where you can click a number of stars out of four or five and the 
+        page will update based on the selection
+        </p>
+        <p>
+            Components usually have classes that will render themselves 
+            into HTML on the page
+        </p>
+    </div>
+    <div class="container mt-4">
+      <h2>
+        Looking at a large app
+      </h2>
+      <p>
+        If we're working on a large project, our file structure will have many 
+        different JavaScript files, 10-30 or however many, but each of our components 
+        is localized inside it's own unique JavaScript file, so our SRC folder will have 
+        a LOT of files inside
+      </p>
+      <p>
+        For example, we can have a navbar component, that we use in different places 
+        in our react app, but the navbar can be a little different depending on 
+        where it is, so we have our navbar js file component, and we can reuse it, 
+        tweak it, and change it depending on where and how we want to
+      </p>
+      <p>
+        The main takeaway is that in a react app, we can have components that 
+        structure our webpage, we can have a default slate, like a navbar 
+        component, and we can take that navbar component and customize it depending 
+        on where the user is in our application, so we could have one central navbar 
+        uncustomized, then take that navbar component and use it in 3 or however many unique 
+        locations, changing how the navbar looks and functions each time
+      </p>
+    </div>
+    <div class="container">
+      <h2>Setting up our server</h2>
+      <p>
+        Normally we'd use a command in the terminal 'create-react-app' which 
+        takes care of a lot of details for us, but it's useful to know how to 
+        set things up the 'old-fashioned' way
+      </p>
+      <p>
+        We'll add a single HTML file, we'll add in a script manually,
+        but the caveat is that we NEED a server, and what we'll use in this 
+        course is the liveServer extension in VSCODE</p>
+    </div>
+    <div class="container">
+      <h2>
+        Components
+      </h2>
+      <h3>
+        Writing our first component
+      </h3>
+      <p>
+        It's time to write our first React component, but there'll be 
+        hundreds we'll write throughout the course, but this one will be the 
+        simplest
+      </p>
+      <p>
+        There are two ways to write components in React, one way is using classes, 
+        and the other is using functions
+      </p>
+      <p>
+        But for this first component we're going to use class
+      </p>
+      <p>
+        Also keep in mind, we're not going to be creating our React 
+        apps this way for long, soon we'll be exclusively utilizing 
+        the 'create-react-app' tool
+      </p>
+      <p>
+         First up, in our html we must include react, we 
+         do this by including the following inside of 
+         script tags INSIDE the body, but at the bottom, and remember 
+         the order that we put them DOES MATTER
+      </p>
+<p>
+        First script tag:
+      </p>
+      <p>
+        src="https://unpkg.com/react/umd/react.development.js"
+      </p>
+      <p>
+        Second script tag:
+      </p>
+      <p>
+        src="https://unpkg.com/react-dom/umd/react-dom.development.sj"
+      </p>
+      <p>
+        Third script tag:
+      </p>
+      <p>
+        src="https://unpkg.com/babel-standalone"
+      </p>
+      <p>
+        Fourth script tag: 
+      </p>
+      <p>
+        src="index.js" type="text/jsx"
+      </p>
+      <p>
+        We're using cdn to link here, but we could download these, 
+        and link to them locally, but we're not going to stress it 
+        since shortly we'll be only using the create-react-app tool
+      </p>
+      <p>
+        HEADS UP!!! The links above for react are deprecated, I think 
+        the babel unpkg links work, but I needed to go to the official 
+        React website and add new CDN links for it to work
+</p>
+<p>
+ crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+ </p>
+ <p>
+crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+</p>
+      <p>
+        The third script tag is for babel, babel allows us to 
+        write html inside our JavaScript, jsx is not valid normally, 
+        so babel transpiles it to valid JavaScript, babel comes 
+        in clutch here for us
+      </p>
+      <p>
+        Finally we just need to link to our index.js file or whichever 
+        file we're creating our component, notice though we need to 
+        append after src="index.js" type="text/jsx", this 
+        is required, without this it will not work
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Fully set up
+      </h2>
+      <p>
+        Now we've got our index.html done, after those script tags 
+        are added in that specific order in the body, and we have our 
+        'root' div above them we're good to go
+      </p>
+      <p>
+        Every single class component we create will be:
+      </p>
+      <p>
+        class Something extends React.Component{
+      </p>
+      <p>
+        render() {
+      </p>
+      <p>
+        return < h1 >Hello, {this.props.name} < /h1> 
+      </p>
+      <p>}</p>
+      <p>}</p>
+    </div>
+    <div class="container">
+      <p>
+      Also note with the render method, we can only return 
+      one type of html tag per render, if we wanted to render 
+      multiple h1 tags or paragraph tags we'd need to:
+      </p>
+      <p>
+        render() {
+      </p>
+      <p>
+        return (
+      </p>
+      <p>
+         < div> 
+      </p>
+      <p>
+        < h1 > hello there < / h1 >
+      </p>
+      <p>
+        < h1 > hello there < / h1 >
+      </p>
+      <p>
+       < p > I am jsx  < / p> 
+       </p>
+       <p>
+        < p > I am jsx< / p> 
+        </p>
+        <p>
+          < /div >
+        </p>
+        <p>
+          );
+        </p>
+        <p>
+        }
+        </p>
+        <p>
+        }
+        </p>
+    </div>
+    <div class="container">
+      <p>
+      The above would work now, we can render multiple of 
+      the same tag, but we must wrap them in a div!
+      </p>
+      <p>
+        That's a very simple component, but all components will 
+        follow a similar structure, we include our CDN links, ESPECIALLY 
+        BABEL, and our 'type="text/jsx"' then inside of our JavaScript
+        file we can write html! And using the ReactDom.render() to 
+        add html to our page FROM a JavaScript file
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Function component
+      </h2>
+      <p>
+        We just wrote our first class component, but 
+        we can also write function components
+      </p>
+      <p>
+        A Class component is the traditional React 
+        component, we write our logic inside of a JS class, 
+        and we MUST include the render() method
+      </p>
+      <p>
+        Function components are usually used for simpler, more 
+        basic components
+      </p>
+      <p>
+        They don't have the same capabilities as class components,
+        and there's no render method needed, just the function 
+        return statement
+      </p>
+      <p>
+        function Dog()
+      </p>
+      <p>
+        {
+      </p>
+      <p>
+        return '< p > German Shepherd, Cava-Corgi < / p >''
+      </p>
+      <p>
+      }
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        So what's the main difference?
+      </p>
+      <p>
+        Both can accept props and render content to the page
+      </p>
+      <p>
+        Historically function components couldn't utitlize 'state' 
+        and 'lifecycle methods'
+      </p>
+      <p>
+        With the introduction of Hooks, we can write full-featured 
+        function components, which will dive into later!
       </p>
     </div>
     <script
