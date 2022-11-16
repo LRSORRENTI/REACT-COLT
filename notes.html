@@ -480,6 +480,41 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         have an explicit closing tag, or be self-closed, the '/'
         is critical, otherwise we'll always get a syntax error
       </p>
+      <p>
+        And remember is we want to render multiple elements 
+        in a single component, they need to be inside of a div tag, 
+        or a section tags
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Embedding JS Expressions in JSX
+      </h2>
+      <p>
+        We can embed JavaScript functions or other data-types using 
+        curly braces nested inside our html tag and inside render(), this works just like 
+        JavaScript but passing it in the render as an expression
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Conditionals in JSX
+      </h2>
+      <p>
+        We can also add conditional logic inside of our JSX, 
+        how we can display things selectively depending on 
+        certain conditions
+      </p>
+      <p>
+        The exercise showed how we can use if/else, ternary operators to 
+        display messaging depending on the condition, for smaller 
+        conditional checks the ternary works well, for larger 
+        conditional checks implementing if /else works
+      </p>
+      <p>
+        There are other ways to structure these conditional 
+        checks to inject data into our webpage we'll see later
+      </p>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
