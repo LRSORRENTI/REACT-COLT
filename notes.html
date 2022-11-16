@@ -516,6 +516,75 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         checks to inject data into our webpage we'll see later
       </p>
     </div>
+    <div class="container">
+      <h2>
+        How to Layout a React Application
+      </h2>
+      <p>
+        In this section we'll learn how to properly 
+        structure the files inside of a React application
+      </p>
+      <p>
+        So far we HAVEN'T been following it, we've been creating a 
+        single component inside of an index.js file
+      </p>
+      <p>
+        It's proper to create a component in it's own file, 
+        with a filename that is obvious at a glance what the 
+        component is.
+      </p>
+      <p>
+        So if we have a greeting component, we create a 
+        file called greet.js, if we have a number picker, 
+        we create a numpicker.js file 
+      </p>
+      <p>
+        One component per file. If our app has 5 compoments, 
+        we have 5 js files, if it has 10 components we have 
+        10 js files, all should have obvious naming as to 
+        what the component is doing, 
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        App
+      </h2>
+      <p>
+        Then after we have our components in separate 
+        files that have obvious names, we create our App
+        component, and our App component is where we utilize 
+        our separate js component files into a single element
+      </p>
+      <p>
+        So we'd have our main App component that will be 
+        the top-level component, which renders all of the 
+        applications individual / separate compoments
+      </p>
+      <p>
+        This way it's easier to read the App code, and 
+        it's almost always the only thing rendered in the main 
+        index.js
+      </p>
+      <p>
+        And like always the ORDER OF THE SCRIPT TAGS are 
+        vitally important
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        So when we make a react application, we'll always 
+        separate our components into their own unique js 
+        files, then in our main index.js, where we have our 'class 
+        App extends React.Component', inside the render we 
+        add our components that we want to render, keeping 
+        them separate
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Intro to REACT PROPS
+      </h2>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
