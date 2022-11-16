@@ -433,6 +433,157 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         With the introduction of Hooks, we can write full-featured 
         function components, which will dive into later!
       </p>
+      <p>
+        For now though, we'll focus on the traditional class
+        based components, that way we can only worry about 
+        one kind of syntax for now, and of course, we'll deep 
+        dive into Hooks later in the course!
+      </p>
+      <p>
+        In summary we can render things to our page with both class, and 
+        function components, but function components are usually utilized 
+        for simpler tasks
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Introducing: JSX
+      </h2>
+      <p>
+        This section we'll learn about JSX which stands for JavaScript
+        Syntax Xtension, or JavaScript + XML
+      </p>
+      <p>
+        JSX is the tool that allows us to write HTML looking code 
+        inside of a JavaScript file, there's a lot going on 
+        behind the scenes with BABEL turning the HTML characters 
+        in JSX to valid JS code
+      </p>
+      <p>
+        It's possible to create React applications without 
+        JSX but it's more time-consuming and results in more code 
+        needing to be written
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        JSX is NOT legal JavaScript
+        </h2>
+        <p>it has to be transpiled to 
+        valid JavaScript using Babel
+      </p>
+      <h2>
+        JSX Rules
+      </h2>
+      <p>
+        JSX is more strict than HTML -- elements must either 
+        have an explicit closing tag, or be self-closed, the '/'
+        is critical, otherwise we'll always get a syntax error
+      </p>
+      <p>
+        And remember is we want to render multiple elements 
+        in a single component, they need to be inside of a div tag, 
+        or a section tags
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Embedding JS Expressions in JSX
+      </h2>
+      <p>
+        We can embed JavaScript functions or other data-types using 
+        curly braces nested inside our html tag and inside render(), this works just like 
+        JavaScript but passing it in the render as an expression
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Conditionals in JSX
+      </h2>
+      <p>
+        We can also add conditional logic inside of our JSX, 
+        how we can display things selectively depending on 
+        certain conditions
+      </p>
+      <p>
+        The exercise showed how we can use if/else, ternary operators to 
+        display messaging depending on the condition, for smaller 
+        conditional checks the ternary works well, for larger 
+        conditional checks implementing if /else works
+      </p>
+      <p>
+        There are other ways to structure these conditional 
+        checks to inject data into our webpage we'll see later
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        How to Layout a React Application
+      </h2>
+      <p>
+        In this section we'll learn how to properly 
+        structure the files inside of a React application
+      </p>
+      <p>
+        So far we HAVEN'T been following it, we've been creating a 
+        single component inside of an index.js file
+      </p>
+      <p>
+        It's proper to create a component in it's own file, 
+        with a filename that is obvious at a glance what the 
+        component is.
+      </p>
+      <p>
+        So if we have a greeting component, we create a 
+        file called greet.js, if we have a number picker, 
+        we create a numpicker.js file 
+      </p>
+      <p>
+        One component per file. If our app has 5 compoments, 
+        we have 5 js files, if it has 10 components we have 
+        10 js files, all should have obvious naming as to 
+        what the component is doing, 
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        App
+      </h2>
+      <p>
+        Then after we have our components in separate 
+        files that have obvious names, we create our App
+        component, and our App component is where we utilize 
+        our separate js component files into a single element
+      </p>
+      <p>
+        So we'd have our main App component that will be 
+        the top-level component, which renders all of the 
+        applications individual / separate compoments
+      </p>
+      <p>
+        This way it's easier to read the App code, and 
+        it's almost always the only thing rendered in the main 
+        index.js
+      </p>
+      <p>
+        And like always the ORDER OF THE SCRIPT TAGS are 
+        vitally important
+      </p>
+    </div>
+    <div class="container">
+      <p>
+        So when we make a react application, we'll always 
+        separate our components into their own unique js 
+        files, then in our main index.js, where we have our 'class 
+        App extends React.Component', inside the render we 
+        add our components that we want to render, keeping 
+        them separate
+      </p>
+    </div>
+    <div class="container">
+      <h2>
+        Intro to REACT PROPS
+      </h2>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
