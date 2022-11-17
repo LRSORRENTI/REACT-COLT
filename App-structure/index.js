@@ -6,6 +6,7 @@ class App extends React.Component{
             <Hello />
             <Hello />
             <NumPicker />
+            <NumPicker />
         </div>
         )
     }
