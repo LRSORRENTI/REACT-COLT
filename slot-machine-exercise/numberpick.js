@@ -2,13 +2,13 @@
 function randNum(){
     let rand = Math.floor(Math.random() * 3) + 1;
     if(rand === 1){
-        return 'X'
+        return '🍏'
     }
    if(rand === 2){
-    return 'Y'
+    return '🍍'
    }
    if(rand === 3){
-    return 'Z'
+    return '🍉'
    }
 }
 
@@ -60,11 +60,10 @@ if(num === num2 && num === num3){
 }
       return(
         <div>
-        <h1>Your number is: {num} {num2} {num3} </h1>
+        <h1>Your pull is: {num} {num2} {num3} </h1>
       {msg}
       </div>
           )
     }
 }
 
-ReactDOM.render(<NumPicker />, document.getElementById('root'))
