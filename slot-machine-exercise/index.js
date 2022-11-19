@@ -4,8 +4,9 @@ class App extends React.Component {
             <div>
                 <h1>Slot machine</h1>
                 <NumPicker/>
-              
+                
                 </div>
+               
         )
     }
 }
