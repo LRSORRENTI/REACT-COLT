@@ -824,6 +824,44 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
       with said data, YOU WILL USE .map() A LOT!!!!
       </p>
     </div>
+    <div class="container">
+      <h2>
+        Setting DEFAULT PROPS
+      </h2>
+      <p>
+        We need to learn how to set default properties, 
+        in case there's a prop that didn't have a value 
+        passed in, we need to set a default value for 
+        that missing property
+      </p>
+      <p>
+        To set these default props, we define an object 
+        called: 'defaultProps'
+      </p>
+      <p>
+        Now we implement this by going into our component 
+        js file, in our case it's Hello.js, and below class 
+      Hello extends React.Component {} we add :
+      </p>
+      <p>
+        static defaultProps = {
+      </p>
+      <p>
+        from: 'anonymous',
+      </p>
+      <p>
+        bangs: 12
+      </p>
+      <p>
+      }
+      </p>
+      <p>
+        Then inside of our index.js, where we actually 
+        render our Hello component, if we omit the 'from' 
+        and the 'bangs' values, there will be default values 
+        acting as placeholders essentially
+      </p>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
