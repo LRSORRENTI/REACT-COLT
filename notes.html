@@ -653,10 +653,175 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         to loop in JSX
       </p>
       <p>
-        The most common way is to use the .map() to output loops in JSX
+        The most common way is to use the .map() to output loops in JSX, 
+        and we can use it to spit out an 'li' or 'p' or whatever we want, 
+        but we use map to pull that data
       </p>
       <p>
-        
+         Let's Demo this: 
+      </p>
+      <p>
+        Inside our index.js file let's create a < Friend / > component inside 
+        of a div, but we'll assign some data inside, and keep in mind 
+        when we assign multiple values we need to use curly braces with 
+        array brackets inside with our list of hobbies
+      </p>
+      <p>
+        < Friend
+      </p>
+      <p>
+        name="Luke",
+      </p>
+      <p>
+        hobbies={['web-dev', 'exercise', 'friends', 'coffee']}
+      </p>
+      <p>
+        />
+      </p>
+      <p>
+        </ div>
+      </p>
+      <p>
+        So now inside our Friend component we have TWO props, name 
+        and hobbies
+      </p>
+      <p>
+        Now the next thing we need to do is, go to our actual friend.js 
+        file, and inside there we go to our render function, 
+        and inside we utilize object destructuring with:
+
+      </p>
+      <p>
+        const {name, hobbies} = this.props;
+      </p>
+      <p>
+        So now we have two variables, each with their corresponding prop inside
+      </p>
+      <p>
+        Next we need to make a div, then return inside the 
+        div an h1, and a list, so we'll have a  ul with li's 
+        for each hobby
+      </p>
+      <p>
+        But first we need to use JavaScript and destructure the object 
+        that the values are stored with .map()
+      </p>
+      <p>
+        class Friend extends React.Component {
+      </p>
+      <p>
+        render() {
+      </p>
+      <p>
+            const {name, hobbies} = this.props;
+      </p>
+      <p>
+        return (
+      </p>
+      <p>
+        < div >
+      </p>
+      <p>
+        < h1 > {name} 
+      </p>
+      <p>
+        < /h1 >
+      </p>
+      <p>
+        < ul >
+      </p>
+      <p>
+        {hobbies.map(hobby => < li >{hobby} < /li > )}
+      </p>
+      <p>
+        < /ul >
+      </p>
+      <p>
+        < / div >
+      </p>
+      <p>
+        )
+      </p>
+      <p>
+      }
+      </p>
+      <p>
+      }
+      </p>
+      <p>
+        One big way we could improve the above code is to take the 
+        entire line:
+      </p>
+      <p>
+        {hobbies.map(hobby => < li >{hobby} < /li > )}
+      </p>
+      <p>
+        And assign it to a variable right below the:
+      </p>
+      <p>
+        const {name, hobbies} = this.props;
+      </p>
+      <p>
+        So essentially it would look like:
+      </p>
+      <p>
+        const {name, hobbies} = this.props;
+      </p>
+      <p>
+        const dStructObj =  {hobbies.map(hobby => < li >{hobby} < /li > )}
+      </p>
+      <p>
+        But we also need to alter it below:
+      </p>
+      <p>
+        class Friend extends React.Component {
+      </p>
+      <p>
+        render() {
+      </p>
+      <p>
+            const {name, hobbies} = this.props;
+      </p>
+      <p>
+        const dStructObj =  {hobbies.map(hobby => < li >{hobby} < /li > )}
+      </p>
+      <p>
+        return (
+      </p>
+      <p>
+        < div >
+      </p>
+      <p>
+        < h1 > {name} 
+      </p>
+      <p>
+        < /h1 >
+      </p>
+      <p>
+        < ul >
+      </p>
+      <p>
+       {dStructObj}
+      </p>
+      <p>
+        < /ul >
+      </p>
+      <p>
+        < / div >
+      </p>
+      <p>
+        )
+      </p>
+      <p>
+      }
+      </p>
+      <p>
+      }
+    </div>
+    <div class="container">
+     <p> So this example is silly BUT the idea is vital, WE USE MAP TO DESTRUCTURE ,
+      so that we can embed data into properties, and in turn render html elements ,
+      with said data, YOU WILL USE .map() A LOT!!!!
       </p>
     </div>
     <script
