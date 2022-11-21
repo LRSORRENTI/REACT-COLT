@@ -862,6 +862,107 @@ crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
         acting as placeholders essentially
       </p>
     </div>
+    <div class="container">
+      <h2>
+        Styling React
+      </h2>
+      <p>
+        Let's go over how to add styling in React, it's 
+        a little different than normal
+      </p>
+      <p>
+        So we can style our components in an app.css file, but WE MUST add 
+        the   
+        </p>
+        <p>
+        < link rel="stylesheet" href="/Styling-React/app.css" />
+      </p>
+      <p>
+        In the head of our main html page
+      </p>
+      <p>
+        Also we can add styling directly to our html in variables on our 
+        component files:
+      </p>
+      <p>
+        const styling = {fontSize:'60px', backgroundColor:'purple'}
+      </p>
+      <p>
+        Then we can use that varible inside of {} to 
+        style paragraph tags or whatever html we want to use the 
+        styling on
+      </p>
+      <p>
+        < p style = {styling}>
+        </p>
+        <p>
+          {s1} {s2} {s3}
+          </p>
+       <p>
+        < / p >
+       </p>
+       <p>
+        So above the {s1}, {s2} and {s3} WILL have a font size of 
+        60px and background color of purple
+       </p>
+       <p>
+        We can use that styling varible on any JSX in that Machine.js 
+        compnent file
+       </p>
+      <p>
+        We could also add those styles inline on the return 
+        statement itself, but it's cleaner to create a variable, then 
+        embed it
+      </p>
+      <p>
+        We can also create the styling inside of an app.css file, the typical 
+        naming conventions are for example, with our slot machine, 
+        we had the < Machine /> component
+      </p>
+      <p>
+        Inside our app.css, we would do something like:
+      </p>
+      <p>
+        .Machine {
+          </p>
+          <p>
+          border: 2px solid black;
+          </p>
+          <p>
+          background: lightblue;
+          </p>
+          <p>
+        }
+      </p>
+      <p>
+        And for the winner and loser sections we use 'kebab-case' or 
+        hyphens basically, as standard convention, inside our app.css file
+      </p>
+      <p>
+        .Machine-winner {
+          </p>
+          <p>
+          color: white;
+          </p>
+          <p>
+          background-color: green;
+          </p>
+          <p>
+        }
+        </p>
+        <p>
+        .Machine-loser {
+          </p>
+          <p>
+          color: white;
+          </p>
+          <p>
+          background-color: red;
+          </p>
+          <p>
+        }
+       </p>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
